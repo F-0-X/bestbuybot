@@ -4,21 +4,27 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 
 import info
+from methods import loginpage
 
 items = {}
 
 items["3080"] = "https://www.bestbuy.com/site/gigabyte-geforce-rtx-3080-aorus-master-10g-gddr6x-pci-express-4-0-graphics-card-black/6436223.p?skuId=6436223"
-items["ibi"] = "https://www.bestbuy.com/site/ibi-the-smart-photo-manager-with-wi-fi-white/6382798.p?skuId=6382798"
+items["ibi"] = "https://www.bestbuy.com/site/wd-my-cloud-home-4tb-personal-cloud-white/5990204.p?skuId=5990204"
 
 
 options = webdriver.ChromeOptions()
-driver= webdriver.Chrome()
+# options.add_experimental_option('prefs', {'intl.accept_languages': 'en,en_US'})
+options.add_argument('lang=en')
+driver= webdriver.Chrome(chrome_options=options)
 driver.maximize_window()
-driver.get(items["ibi"]);
+# driver.get(items["ibi"]);
 complete = False
+
+def
 
 if __name__ == '__main__':
 
+    loginpage(driver)
 
     while not complete:
         try:
